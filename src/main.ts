@@ -6,7 +6,7 @@ import * as dotenv from 'dotenv';
 import { sessionConfig } from '../session/session.config';
 dotenv.config({path: '.env.development.local'})
 
-async function bootstrap() {
+export async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
