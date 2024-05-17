@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {User} from '../src/user/entities/user.entity'
 import {Form} from '../src/form/entities/form.entity'
-import { MerchantID } from 'src/merchantID/merchantID.entity';
-import { Pos } from 'src/pos/pos.entity';
-import { Email } from 'src/email/email.entity';
+import { MerchantID } from '../src/merchantID/merchantID.entity';
+import { Email } from '../src/email/email.entity';
+import { Pos } from '../src/pos/pos.entity';
 
 
 

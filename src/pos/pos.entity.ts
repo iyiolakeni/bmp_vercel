@@ -5,7 +5,7 @@ import { Model } from "./enums/model.enum";
 import { PTSP } from "./enums/ptsp.enum";
 import { Accounts } from "./enums/accounts.enum";
 
-@Entity('POS')
+@Entity()
 export class Pos{
     @PrimaryGeneratedColumn()
     id: number;
