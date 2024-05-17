@@ -1,9 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { sessionConfig } from 'session/session.config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import session from 'express-session';
 import * as dotenv from 'dotenv';
+import { sessionConfig } from '../session/session.config';
 dotenv.config({path: '.env.development.local'})
 
 async function bootstrap() {
