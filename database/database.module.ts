@@ -11,7 +11,7 @@ import { Pos } from "../src/pos/pos.entity";
     TypeOrmModule.forFeature([User, Form, MerchantID, Pos, Email]),
     TypeOrmModule.forRoot({
       type: "postgres",
-      host: process.env.POSTGRESS_HOST,
+      host: process.env.POSTGRES_HOST,
       port: 5432,
       username: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
