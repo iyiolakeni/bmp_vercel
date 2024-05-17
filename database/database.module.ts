@@ -9,14 +9,15 @@ import { Pos } from "../src/pos/pos.entity";
 @Module({
   imports: [
     TypeOrmModule.forFeature([User, Form, MerchantID, Pos, Email]),
-    TypeOrmModule.forRoot({
+    TypeOrmModule.forRootAsync({
+      useFactory: () =>({
       type: "postgres",
       host: process.env.POSTGRES_HOST,
       port: 5432,
       username: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DATABASE,
-      entities: [User, Form, MerchantID, Pos, Email],
+      autoLoadEntities: true,
       synchronize: false,
       ssl: true,
       extra: {
@@ -25,6 +26,7 @@ import { Pos } from "../src/pos/pos.entity";
         },
       },
       // logging: true,
+    }),
     }),
   ],
   exports: [TypeOrmModule],
