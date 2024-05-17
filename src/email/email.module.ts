@@ -1,8 +1,8 @@
 import { DatabaseModule } from 'database/database.module';
 import { Module } from '@nestjs/common';
-import { EmailController } from 'src/email/email.controller';
-import { EmailService } from 'src/email/email.service';
 import { ImapService } from './imap.service';
+import { EmailController } from './email.controller';
+import { EmailService } from './email.service';
 
 
 
