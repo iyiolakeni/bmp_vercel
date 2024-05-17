@@ -16,7 +16,7 @@ import { EmailModule } from './email/email.module';
             FormModule,
             MerchantIDModule,
             PosModule,
-            EmailModule
+            // EmailModule
           ],
   controllers: [UserController],
   providers: [
