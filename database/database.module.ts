@@ -17,7 +17,7 @@ import { Pos } from "../src/pos/pos.entity";
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DATABASE,
       entities: [User, Form, MerchantID, Pos, Email],
-      synchronize: true,
+      synchronize: false,
       ssl: true,
       extra: {
         ssl: {
