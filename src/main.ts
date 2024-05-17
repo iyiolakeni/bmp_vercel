@@ -3,6 +3,8 @@ import { AppModule } from './app.module';
 import { sessionConfig } from 'session/session.config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import session from 'express-session';
+import * as dotenv from 'dotenv';
+dotenv.config({path: '.env.development.local'})
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
