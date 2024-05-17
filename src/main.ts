@@ -6,7 +6,7 @@ import * as dotenv from 'dotenv';
 import { sessionConfig } from '../session/session.config';
 dotenv.config({path: '.env.development.local'})
 
-export async function bootstrap() {
+async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
@@ -35,4 +35,4 @@ const document = SwaggerModule.createDocument(app, config);
 SwaggerModule.setup('/', app, document);
   await app.listen(5000);
 }
-bootstrap();
+export default bootstrap();
